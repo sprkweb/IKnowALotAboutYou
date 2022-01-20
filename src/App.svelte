@@ -1,10 +1,16 @@
 <script lang="ts">
   import '@/i18n'
+  import { _ } from 'svelte-i18n';
 
   import UserScreen from '@/components/UserScreen/index.svelte'
 </script>
 
+<svelte:head>
+	<title>{ $_('title') }</title>
+</svelte:head>
+
 <div class="app">
+  <h1>{ $_('title') }</h1>
   <UserScreen />
 </div>
 
