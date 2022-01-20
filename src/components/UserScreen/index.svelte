@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { _ } from 'svelte-i18n';
+
   type Size = { width: number, height: number }
   const fmtSize = (s?: Size) => s ? `${s.width}x${s.height}` : '';
 
@@ -36,8 +38,23 @@
   window.addEventListener('resize', resizeWindow)
 </script>
 
-<p>{ fmtSize(screenSize) }</p>
-<p>{ fmtSize(availSize) }</p>
-<p>{ fmtSize(windowSize) }</p>
-<p>{ fmtSize(pageVisibleSize) }</p>
-<p>{ fmtSize(pageFullSize) }</p>
+<p>
+  { $_('screen.screenSize') }:
+  { fmtSize(screenSize) }
+</p>
+<p>
+  { $_('screen.availSize') }:
+  { fmtSize(availSize) }
+</p>
+<p>
+  { $_('screen.windowSize') }:
+  { fmtSize(windowSize) }
+</p>
+<p>
+  { $_('screen.pageVisibleSize') }:
+  { fmtSize(pageVisibleSize) }
+</p>
+<p>
+  { $_('screen.pageFullSize') }:
+  { fmtSize(pageFullSize) }
+</p>

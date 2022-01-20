@@ -1,9 +1,11 @@
 <script lang="ts">
-  import Screen from '@/Screen/index.svelte'
+  import '@/i18n'
+
+  import UserScreen from '@/components/UserScreen/index.svelte'
 </script>
 
 <div>
-  <Screen />
+  <UserScreen />
 </div>
 
 <style>

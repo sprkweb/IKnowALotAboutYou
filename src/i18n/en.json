@@ -1,0 +1,9 @@
+{
+  "screen": {
+    "screenSize": "Screen resolution",
+    "availSize": "Maximum available window size",
+    "windowSize": "Window size",
+    "pageVisibleSize": "Visible page size",
+    "pageFullSize": "Full page size"
+  }
+}
