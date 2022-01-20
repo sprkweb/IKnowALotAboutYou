@@ -20,8 +20,10 @@ export default {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: true,
+    treeshake: true,
+    minify: true,
+    sourcemap: 'external'
   },
   packageOptions: {
     /* ... */
