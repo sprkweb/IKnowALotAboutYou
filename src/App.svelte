@@ -1,7 +1,10 @@
 <script lang="ts">
+  import Screen from '@/Screen/index.svelte'
 </script>
 
-<div></div>
+<div>
+  <Screen />
+</div>
 
 <style>
 </style>

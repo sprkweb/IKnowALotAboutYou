@@ -15,10 +15,9 @@ export default {
       },
     ],
   ],
-  routes: [
-    /* Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  alias: {
+    '@': './src'
+  },
   optimize: {
     bundle: true,
     treeshake: true,
