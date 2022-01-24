@@ -3,6 +3,7 @@
   import { _ } from 'svelte-i18n';
 
   import UserScreen from '@/components/UserScreen/index.svelte'
+  import UserControls from '@/components/UserControls/index.svelte'
 </script>
 
 <svelte:head>
@@ -12,6 +13,7 @@
 <div class="app">
   <h1>{ $_('title') }</h1>
   <UserScreen />
+  <UserControls />
 </div>
 
 <style lang="scss">

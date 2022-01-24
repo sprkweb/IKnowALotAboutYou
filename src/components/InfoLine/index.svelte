@@ -4,12 +4,21 @@
 </script>
 
 <tr>
-  <td>{name}</td>
-  <td>{value}</td>
+  <td class="name">{name}</td>
+  <td class="value">{value}</td>
 </tr>
 
 <style lang="scss">
   td {
     border: 0 none;
+  }
+
+  .name {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  .value {
+    padding-left: 1em;
   }
 </style>

@@ -6,5 +6,9 @@
     "windowSize": "Window size",
     "pageVisibleSize": "Visible page size",
     "pageFullSize": "Full page size"
+  },
+  "controls": {
+    "mouse": "Cursor",
+    "touch": "Touch screen"
   }
 }
