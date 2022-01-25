@@ -4,7 +4,7 @@
   import InfoList from '@/components/InfoList/index.svelte'
   import InfoLine from '@/components/InfoLine/index.svelte'
 
-  const fields = ['status', 'continent', 'country', 'regionName', 'city', 'district', 'zip', 'lat', 'lon', 'isp', 'org', 'as', 'mobile', 'proxy', 'hosting', 'query']
+  const fields = ['status', 'continent', 'country', 'regionName', 'city', 'lat', 'lon', 'isp', 'mobile', 'proxy', 'hosting', 'query']
   let connError: boolean = true
   let connInfo: Record<string, string>
 
