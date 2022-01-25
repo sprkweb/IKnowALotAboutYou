@@ -1,4 +1,4 @@
-{
+export default {
   "title": "Я Знаю О Тебе Многое",
   "screen": {
     "screenSize": "Разрешение экрана",

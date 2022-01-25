@@ -1,7 +1,7 @@
 import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
 
-import en from './en.json';
-import ru from './ru.json';
+import en from '@/i18n/en'
+import ru from '@/i18n/ru'
 
 addMessages('en', en);
 addMessages('ru', ru);

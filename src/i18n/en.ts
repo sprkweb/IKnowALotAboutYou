@@ -1,4 +1,4 @@
-{
+export default {
   "title": "I Know A Lot About You",
   "screen": {
     "screenSize": "Screen resolution",
