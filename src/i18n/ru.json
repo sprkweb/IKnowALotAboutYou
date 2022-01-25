@@ -10,5 +10,8 @@
   "controls": {
     "mouse": "Курсор",
     "touch": "Сенсорный экран"
+  },
+  "connection": {
+    "ip": "IP адрес"
   }
 }

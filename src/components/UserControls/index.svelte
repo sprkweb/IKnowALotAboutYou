@@ -1,22 +1,12 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
+  import { _ } from 'svelte-i18n'
+  import { showWhether } from '@/helpers'
   import InfoList from '@/components/InfoList/index.svelte'
   import InfoLine from '@/components/InfoLine/index.svelte'
 
   let mouseDetected: boolean = false
   let touchDetected: boolean = false
   let mouseEv: MouseEvent, touchEv: TouchEvent
-
-  function showWhether (condition: boolean, content?: () => string) {
-    if (condition) {
-      if (content)
-        return '✓ ' + content()
-      else
-        return '✓'
-    } else {
-      return '✗'
-    }
-  }
 
   window.addEventListener('mousemove', (e) => {
     mouseDetected = true

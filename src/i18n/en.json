@@ -10,5 +10,8 @@
   "controls": {
     "mouse": "Cursor",
     "touch": "Touch screen"
+  },
+  "connection": {
+    "ip": "IP address"
   }
 }

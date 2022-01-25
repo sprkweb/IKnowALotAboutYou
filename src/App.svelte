@@ -4,6 +4,7 @@
 
   import UserScreen from '@/components/UserScreen/index.svelte'
   import UserControls from '@/components/UserControls/index.svelte'
+  import UserConnection from '@/components/UserConnection/index.svelte'
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
   <h1>{ $_('title') }</h1>
   <UserScreen />
   <UserControls />
+  <UserConnection />
 </div>
 
 <style lang="scss">
