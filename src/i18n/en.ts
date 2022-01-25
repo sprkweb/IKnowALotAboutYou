@@ -13,15 +13,10 @@ export default {
   },
   "connection": {
     "ip": "IP address",
-    "continent": "Continent",
     "country": "Country",
-    "regionName": "Region/state",
+    "region": "Region/state",
     "city": "City",
-    "lat": "Latitude",
-    "lon": "Longitude",
-    "isp": "Internet service provider",
-    "mobile": "Mobile (cellular) connection?",
-    "proxy": "Proxy, VPN or Tor?",
-    "hosting": "Hosting, colocated or data center?"
+    "latitude": "Latitude",
+    "longitude": "Longitude"
   }
 }

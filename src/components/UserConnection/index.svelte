@@ -4,11 +4,19 @@
   import InfoList from '@/components/InfoList/index.svelte'
   import InfoLine from '@/components/InfoLine/index.svelte'
 
-  const fields = ['status', 'continent', 'country', 'regionName', 'city', 'lat', 'lon', 'isp', 'mobile', 'proxy', 'hosting', 'query']
+  const fields = [
+    // ["i18n field name", "API field name"]
+    ['ip', 'ip'],
+    ['country', 'country_name'],
+    ['region', 'region'],
+    ['city', 'city'],
+    ['latitude', 'latitude'],
+    ['longitude', 'longitude']
+  ]
   let connError: boolean = true
   let connInfo: Record<string, string>
 
-  const api = `http://ip-api.com/json?lang=${$locale}&fields=${fields.join(',')}`
+  const api = `https://ipapi.co/json/`
   fetch(api)
     .then((r) => r.json())
     .then((j) => {
@@ -33,14 +41,14 @@
 <InfoList>
   <InfoLine
     name={ $_(`connection.ip`) }
-    value={ showWhether(!connError, () => connInfo.query) }
+    value={ showWhether(!connError, () => connInfo.ip) }
     />
   {#if !connError}
-    {#each fields as field}
-      {#if field !== 'query' && connInfo[field] !== undefined}
+    {#each fields as [fieldName, apiFieldName]}
+      {#if fieldName !== 'ip' && connInfo[apiFieldName] !== undefined}
         <InfoLine
-          name={ $_(`connection.${field}`) }
-          value={ connInfo[field] }
+          name={ $_(`connection.${fieldName}`) }
+          value={ connInfo[apiFieldName] }
           />
       {/if}
     {/each}

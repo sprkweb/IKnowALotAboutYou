@@ -13,15 +13,10 @@ export default {
   },
   "connection": {
     "ip": "IP адрес",
-    "continent": "Континент",
     "country": "Страна",
-    "regionName": "Регион/штат",
+    "region": "Регион/штат",
     "city": "Город",
-    "lat": "Широта",
-    "lon": "Долгота",
-    "isp": "Интернет-провайдер",
-    "mobile": "Мобильное (сотовое) подключение?",
-    "proxy": "Proxy, VPN или Tor?",
-    "hosting": "Хостинг или дата-сервер?"
+    "latitude": "Широта",
+    "longitude": "Долгота"
   }
 }
