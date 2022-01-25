@@ -32,6 +32,6 @@ export default {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    baseURL: 'https://www.sprkweb.dev/IKnowALotAboutYou/'
   },
 };
