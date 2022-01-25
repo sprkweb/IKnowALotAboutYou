@@ -7,7 +7,6 @@ export default {
   plugins: [
     '@snowpack/plugin-svelte',
     '@snowpack/plugin-sass',
-    '@snowpack/plugin-dotenv',
     [
       '@snowpack/plugin-typescript',
       {
@@ -20,7 +19,7 @@ export default {
     '@': './src'
   },
   optimize: {
-    bundle: true,
+    // bundle: true,
     treeshake: true,
     minify: true,
     sourcemap: 'external'
