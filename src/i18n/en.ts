@@ -18,5 +18,13 @@ export default {
     "city": "City",
     "latitude": "Latitude",
     "longitude": "Longitude"
+  },
+  "agent": {
+    "browser": "Browser",
+    "engine": "Browser engine",
+    "os": "Operating system",
+    "deviceType": "Device type",
+    "device": "Device",
+    "cpu": "CPU architecture"
   }
 }

@@ -4,6 +4,7 @@
 
   import UserScreen from '@/components/UserScreen/index.svelte'
   import UserControls from '@/components/UserControls/index.svelte'
+  import UserAgent from '@/components/UserAgent/index.svelte'
   // import UserConnection from '@/components/UserConnection/index.svelte'
 </script>
 
@@ -16,6 +17,7 @@
   <UserScreen />
   <UserControls />
   <!-- <UserConnection /> -->
+  <UserAgent />
 </div>
 
 <style lang="scss">
