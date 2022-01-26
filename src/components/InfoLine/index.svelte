@@ -3,22 +3,25 @@
   export let value: string;
 </script>
 
-<tr>
-  <td class="name">{name}</td>
-  <td class="value">{value}</td>
-</tr>
+<div class="name">{name}</div>
+<div class="value">{value}</div>
 
 <style lang="scss">
-  td {
-    border: 0 none;
-  }
-
   .name {
-    width: 1%;
-    white-space: nowrap;
+    grid-column: 1 / 3;
   }
 
   .value {
-    padding-left: 1em;
+    margin-bottom: 1em;
+  }
+
+  @media (min-width: 768px) {
+      .name {
+        grid-column: 1 / 2;
+      }
+
+      .value {
+        margin-bottom: 0;
+      }
   }
 </style>
