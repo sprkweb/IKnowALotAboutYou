@@ -39,7 +39,11 @@
     value={
       showWhether(
         touchDetected,
-        () => Array.from(touchEv.touches).map((p) => `${p.clientX}x${p.pageY}`).join(', '))
+        () => Array
+          .from(touchEv.touches)
+          .map((p) => `${Math.round(p.clientX)}x${Math.round(p.pageY)}`)
+          .join(', ')
+      )
      }
     />
 </InfoList>
