@@ -30,12 +30,16 @@
   html, body {
     font-family: var(--font-family);
     font-size: var(--font-size);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .app {
   max-width: 800px;
   margin: 0 auto;
+  padding: 1em;
 }
 
 </style>

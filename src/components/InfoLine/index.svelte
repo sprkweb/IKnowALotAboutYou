@@ -9,6 +9,7 @@
 <style lang="scss">
   .name {
     grid-column: 1 / 3;
+    font-weight: 500;
   }
 
   .value {
