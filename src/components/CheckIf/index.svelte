@@ -3,7 +3,17 @@
 </script>
 
 {#if condition}
-  &check; <slot></slot>
+  <span class="check">&check;</span> <slot></slot>
 {:else}
-  &cross;
+  <div class="cross">&cross;</div>
 {/if}
+
+<style lang="scss">
+  .check {
+    color: green;
+  }
+
+  .cross {
+    color: red;
+  }
+</style>
