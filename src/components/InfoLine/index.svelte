@@ -1,10 +1,9 @@
 <script lang='ts'>
   export let name: string;
-  export let value: string;
 </script>
 
 <div class="name">{name}</div>
-<div class="value">{value}</div>
+<div class="value"><slot></slot></div>
 
 <style lang="scss">
   .name {

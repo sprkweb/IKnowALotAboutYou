@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { _, locale } from 'svelte-i18n'
-  import { showWhether } from '@/helpers'
+  import { _ } from 'svelte-i18n'
   import InfoList from '@/components/InfoList/index.svelte'
   import InfoLine from '@/components/InfoLine/index.svelte'
+  import CheckIf from '@/components/CheckIf/index.svelte'
 
   const fields = [
     // ["i18n field name", "API field name"]
@@ -21,35 +21,35 @@
     .then((r) => r.json())
     .then((j) => {
       if (j.status !== 'success') connError = true
-      connInfo = j.map((x: unknown) => {
-        switch (typeof x) {
-          case 'string':
-            return x
-          case 'boolean':
-            return showWhether(x)
-          case 'number':
-            return x.toString()
-          default:
-            console.log('API has returned an invalid type ', x)
-            break;
-        }
-      })
+      // connInfo = j.map((x: unknown) => {
+      //   switch (typeof x) {
+      //     case 'string':
+      //       return x
+      //     case 'boolean':
+      //       return showWhether(x)
+      //     case 'number':
+      //       return x.toString()
+      //     default:
+      //       console.log('API has returned an invalid type ', x)
+      //       break;
+      //   }
+      // })
     })
     .catch(() => connError = true)
 </script>
 
 <InfoList>
-  <InfoLine
-    name={ $_(`connection.ip`) }
-    value={ showWhether(!connError, () => connInfo.ip) }
-    />
+  <InfoLine name={ $_(`connection.ip`) }>
+    <CheckIf condition={ !connError }>
+      { connInfo.ip }
+    </CheckIf>
+  </InfoLine>
   {#if !connError}
     {#each fields as [fieldName, apiFieldName]}
       {#if fieldName !== 'ip' && connInfo[apiFieldName] !== undefined}
-        <InfoLine
-          name={ $_(`connection.${fieldName}`) }
-          value={ connInfo[apiFieldName] }
-          />
+        <InfoLine name={ $_(`connection.${fieldName}`) }>
+          { connInfo[apiFieldName] }
+        </InfoLine>
       {/if}
     {/each}
   {/if}

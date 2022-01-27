@@ -42,9 +42,8 @@
 
 <InfoList>
   {#each sizeNames as sizeName}
-    <InfoLine
-      name={ $_(`screen.${sizeName}`) }
-      value={ fmtSize(sizes[sizeName]) }
-      />
+    <InfoLine name={ $_(`screen.${sizeName}`) }>
+      { fmtSize(sizes[sizeName]) }
+    </InfoLine>
   {/each}
 </InfoList>
