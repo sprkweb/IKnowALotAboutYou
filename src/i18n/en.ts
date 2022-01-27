@@ -26,5 +26,9 @@ export default {
     "deviceType": "Device type",
     "device": "Device",
     "cpu": "CPU architecture"
+  },
+  "lang": {
+    "language": "Preferred language",
+    "languages": "All preferred languages"
   }
 }
