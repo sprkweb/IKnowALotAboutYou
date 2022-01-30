@@ -34,7 +34,7 @@
   </InfoLine>
   {#if !connError}
     {#each fields as [fieldName, apiFieldName]}
-      {#if fieldName !== 'ip' && connInfo[apiFieldName] !== undefined}
+      {#if fieldName !== 'ip' && connInfo[apiFieldName] != null}
         <InfoLine name={ $_(`connection.${fieldName}`) }>
           {#if typeof connInfo[apiFieldName] == 'boolean'}
             <CheckIf condition={ !!connInfo[apiFieldName] } />

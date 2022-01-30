@@ -3,7 +3,7 @@ const https = require('https')
 const apiKey = process.env.API_KEY
 
 exports.handler = function (event, context) {
-  let ip = event.headers['client-ip']
+  let ip = event.headers['x-nf-client-connection-ip'] || event.headers['client-ip']
   if (ip == '::1') ip = ''
   const api = `https://api.ipdata.co/${ip}?api-key=${apiKey}`
   console.log(api)
