@@ -6,7 +6,7 @@
   import UserControls from '@/components/UserControls/index.svelte'
   import UserAgent from '@/components/UserAgent/index.svelte'
   import UserLang from '@/components/UserLang/index.svelte'
-  // import UserConnection from '@/components/UserConnection/index.svelte'
+  import UserConnection from '@/components/UserConnection/index.svelte'
 </script>
 
 <svelte:head>
@@ -17,7 +17,7 @@
   <h1>{ $_('title') }</h1>
   <UserScreen />
   <UserControls />
-  <!-- <UserConnection /> -->
+  <UserConnection />
   <UserAgent />
   <UserLang />
 </div>

@@ -14,26 +14,14 @@
     ['longitude', 'longitude']
   ]
   let connError: boolean = true
-  let connInfo: Record<string, string>
+  let connInfo: Record<string, unknown>
 
-  const api = `https://ipapi.co/json/`
+  const api = `./.netlify/functions/api`
   fetch(api)
     .then((r) => r.json())
     .then((j) => {
       if (j.status !== 'success') connError = true
-      // connInfo = j.map((x: unknown) => {
-      //   switch (typeof x) {
-      //     case 'string':
-      //       return x
-      //     case 'boolean':
-      //       return showWhether(x)
-      //     case 'number':
-      //       return x.toString()
-      //     default:
-      //       console.log('API has returned an invalid type ', x)
-      //       break;
-      //   }
-      // })
+      connInfo = j
     })
     .catch(() => connError = true)
 </script>
@@ -48,7 +36,13 @@
     {#each fields as [fieldName, apiFieldName]}
       {#if fieldName !== 'ip' && connInfo[apiFieldName] !== undefined}
         <InfoLine name={ $_(`connection.${fieldName}`) }>
-          { connInfo[apiFieldName] }
+          {#if typeof connInfo[apiFieldName] == 'boolean'}
+            <CheckIf condition={ !!connInfo[apiFieldName] } />
+          {:else}
+            <CheckIf condition={ true }>
+              { connInfo[apiFieldName] }
+            </CheckIf>
+          {/if}
         </InfoLine>
       {/if}
     {/each}
