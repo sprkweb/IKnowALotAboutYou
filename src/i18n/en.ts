@@ -13,11 +13,27 @@ export default {
   },
   "connection": {
     "ip": "IP address",
+    "continent": "Continent",
     "country": "Country",
     "region": "Region/state",
     "city": "City",
     "latitude": "Latitude",
-    "longitude": "Longitude"
+    "longitude": "Longitude",
+    "asnType": "Autonomous system type",
+    "asnTypes": {
+      "hosting": "Data center",
+      "isp": "Internet Service Provider",
+      "cdn": "Content Delivery Network",
+      "edu": "Educational institution",
+      "gov": "Government agency",
+      "mul": "Military organization",
+      "business": "End-user organizations"
+    },
+    "asn": "Autonomous system",
+    "timeZone": "Time zone",
+    "tor": "Using Tor?",
+    "proxy": "Using Proxy?",
+    "threat": "Known malicious address?"
   },
   "agent": {
     "browser": "Browser",
