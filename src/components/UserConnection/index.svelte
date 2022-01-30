@@ -19,10 +19,7 @@
   const api = `./.netlify/functions/api`
   fetch(api)
     .then((r) => r.json())
-    .then((j) => {
-      if (j.status !== 'success') connError = true
-      connInfo = j
-    })
+    .then((j) => connInfo = j)
     .catch(() => connError = true)
 </script>
 
