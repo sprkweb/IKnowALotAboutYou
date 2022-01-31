@@ -9,7 +9,11 @@ export default {
   },
   "controls": {
     "mouse": "Cursor",
-    "touch": "Touch screen"
+    "touch": "Touch screen",
+    "maxTouchPoints": "Maximum number of simultaneous touch points",
+    "videoInputs": "Camera",
+    "audioInputs": "Microphone",
+    "audioOutputs": "Speakers / headphones"
   },
   "connection": {
     "ip": "IP address",
@@ -46,5 +50,9 @@ export default {
   "lang": {
     "language": "Preferred language",
     "languages": "All preferred languages"
+  },
+  "features": {
+    "cookie": "Cookie enabled?",
+    "doNotTrack": "Do Not Track enabled?"
   }
 }

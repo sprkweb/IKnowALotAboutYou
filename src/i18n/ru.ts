@@ -9,7 +9,11 @@ export default {
   },
   "controls": {
     "mouse": "Курсор",
-    "touch": "Сенсорный экран"
+    "touch": "Сенсорный экран",
+    "maxTouchPoints": "Максимальное количество одновременных сенсорных нажатий",
+    "videoInputs": "Камера",
+    "audioInputs": "Микрофон",
+    "audioOutputs": "Колонки / наушники"
   },
   "connection": {
     "ip": "IP адрес",
@@ -46,5 +50,9 @@ export default {
   "lang": {
     "language": "Предпочитаемый язык",
     "languages": "Все предпочитаемые языки"
+  },
+  "features": {
+    "cookie": "Cookie включены?",
+    "doNotTrack": "Do Not Track включён?"
   }
 }

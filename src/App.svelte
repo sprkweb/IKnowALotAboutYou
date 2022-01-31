@@ -7,6 +7,7 @@
   import UserAgent from '@/components/UserAgent/index.svelte'
   import UserLang from '@/components/UserLang/index.svelte'
   import UserConnection from '@/components/UserConnection/index.svelte'
+  import UserFeatures from '@/components/UserFeatures/index.svelte'
 </script>
 
 <svelte:head>
@@ -20,6 +21,7 @@
   <UserConnection />
   <UserAgent />
   <UserLang />
+  <UserFeatures />
 </div>
 
 <style lang="scss">

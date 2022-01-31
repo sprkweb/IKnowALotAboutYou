@@ -22,6 +22,12 @@
     touchDetected = true
     touchEv = e
   })
+
+  let mediaDevices: MediaDeviceInfo[] | null = null
+  if (navigator.mediaDevices?.enumerateDevices)
+    navigator.mediaDevices
+      .enumerateDevices()
+      .then(d => mediaDevices = d)
 </script>
 
 <InfoList>
@@ -30,6 +36,7 @@
       {mouseEv.clientX}x{mouseEv.clientY}
     </CheckIf>
   </InfoLine>
+
   <InfoLine name={ $_(`controls.touch`) }>
     <CheckIf condition={ touchDetected }>
       {
@@ -38,6 +45,30 @@
           .map((p) => `${Math.round(p.clientX)}x${Math.round(p.pageY)}`)
           .join(', ')
       }
+    </CheckIf>
+  </InfoLine>
+
+  <InfoLine name={ $_(`controls.maxTouchPoints`) }>
+    <CheckIf condition={ window.navigator.maxTouchPoints != null}>
+      { window.navigator.maxTouchPoints }
+    </CheckIf>
+  </InfoLine>
+
+  <InfoLine name={ $_(`controls.videoInputs`) }>
+    <CheckIf condition={ mediaDevices != null }>
+      { mediaDevices?.filter(d => d.kind == 'videoinput').length }
+    </CheckIf>
+  </InfoLine>
+
+  <InfoLine name={ $_(`controls.audioInputs`) }>
+    <CheckIf condition={ mediaDevices != null }>
+      { mediaDevices?.filter(d => d.kind == 'audioinput').length }
+    </CheckIf>
+  </InfoLine>
+
+  <InfoLine name={ $_(`controls.audioOutputs`) }>
+    <CheckIf condition={ mediaDevices != null }>
+      { mediaDevices?.filter(d => d.kind == 'audiooutput').length }
     </CheckIf>
   </InfoLine>
 </InfoList>
