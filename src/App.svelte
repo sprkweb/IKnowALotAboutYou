@@ -16,12 +16,21 @@
 
 <div class="app">
   <h1>{ $_('title') }</h1>
-  <UserScreen />
-  <UserControls />
-  <UserConnection />
+  <p>{ $_('disclaimer') }</p>
+  <p>{ $_('javascript_explanation') }</p>
   <UserAgent />
+  <UserControls />
   <UserLang />
   <UserFeatures />
+  <UserScreen />
+  <p>{ $_('what_else') }</p>
+  <p>{ $_('connection_explanation') }</p>
+  <UserConnection />
+  <p>
+    <a href="https://github.com/sprkweb/IKnowALotAboutYou" rel="noreferrer">
+      { $_('this_page_on_github') }
+    </a>
+  </p>
 </div>
 
 <style lang="scss">

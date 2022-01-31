@@ -1,5 +1,10 @@
 export default {
   "title": "I Know A Lot About You",
+  "disclaimer": "This site does not store any information, but other sites can (and often do, for example, through Google Analytics).",
+  "javascript_explanation": "The following information (and a lot of other information too) can be obtained through JavaScript:",
+  "what_else": "Some information can be accessed only if you grant your permission to the site: exact position (GPS), sensors (gyroscope, accelerometer...), webcam, microphone, other connected devices (USB, MIDI), clipboard, etc.",
+  "connection_explanation": "The following information is available to anybody who knows your IP address:",
+  "this_page_on_github": "This page on GitHub.",
   "screen": {
     "screenSize": "Screen resolution",
     "availSize": "Maximum available window size",
